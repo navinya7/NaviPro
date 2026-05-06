@@ -1,0 +1,27 @@
+Options -Indexes
+ServerSignature Off
+
+# ── Show PHP errors (DEVELOPMENT MODE - remove for production) ──
+<IfModule mod_php7.c>
+    php_flag  display_errors On
+    php_flag  log_errors     On
+    php_value error_reporting 32767
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag  display_errors On
+    php_flag  log_errors     On
+    php_value error_reporting 32767
+</IfModule>
+
+# ── Security Headers ──
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# ── Allow all PHP files to run ──
+<Files "*.php">
+    Order allow,deny
+    Allow from all
+</Files>
