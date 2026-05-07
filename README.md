@@ -1,4 +1,4 @@
-# 🚀 FlashRide — Rapido-like Ride Booking Platform
+# 🚀 FlashRide — Online Ride Booking Platform
 
 ## 📁 Project Structure
 ```
